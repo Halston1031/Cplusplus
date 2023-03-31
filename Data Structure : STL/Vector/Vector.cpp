@@ -208,7 +208,7 @@ int main()
     // 向前
     auto itt = v.begin(); // 指向第一個元素的迭代器
     cout << "\niterator before moving forward: " << *itt << '\n';
-    advance(itt, 10); // 需要 #include <iterator>. 向前9步 -> 1
+    advance(itt, 10); // 需要 #include <iterator>. 向前10步 -> 0
     cout << "iterator after moving forward(10): " << *itt << '\n';
     
     // 向後(危險做法)
@@ -295,8 +295,8 @@ int main()
     cout << "\n10-2. data()" << '\n';
     vector<int> myvector (5); // 5個int空間
     int* t = myvector.data();
-    *t = 10; //myvector[0]
-    ++t; //向前遞進
+    *t = 10; // myvector[0]
+    ++t; // 向前遞進
     *t = 20; // myvector[1]
     t[2] = 100; // t 增加 2，因此它現在指向第四個元素: myvector[3]
     cout << "Myvector contains:";
